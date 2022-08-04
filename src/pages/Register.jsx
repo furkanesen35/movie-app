@@ -1,6 +1,9 @@
 import React,{useState} from 'react';
+import { createUser } from '../auth/firebase';
+import {useNavigate} from "react-router-dom";
 
 const Register = () => {
+ const navigate = useNavigate();
  const [firstName, setFirstName] = useState()
  const [lastname, setLastname] = useState()
  const [email, setEmail] = useState()
@@ -8,6 +11,7 @@ const Register = () => {
  const handleSubmit = (e) => {
   e.preventDefault();
   console.log(firstName,lastname,email,password);
+  createUser(email,password,navigate)
  }
  return (
   <div className='d-flex justify-content-center' >
