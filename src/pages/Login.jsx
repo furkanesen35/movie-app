@@ -26,10 +26,11 @@ const Login = () => {
       <input type="password" className="form-control" id='password' placeholder='Enter your password...' required
         onChange={(e)=>setPassword(e.target.value)}
       />
-      
+      <div className="link">Forgot Password</div>
      </div>
      <input type="submit" className='btn btn-primary form-control' value="Register"/>
     </form>
+    <button className="btn btn-primary form-control">Continue with Google</button>
   </div>
  </div>
  );
