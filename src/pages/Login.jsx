@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { signIn } from '../auth/firebase';
+import { signIn, signUpProvider } from '../auth/firebase';
 import {useNavigate} from "react-router-dom"
 
 const Login = () => {
@@ -10,6 +10,9 @@ const Login = () => {
   e.preventDefault();
   console.log(email,password);
   signIn(email,password,navigate)
+ }
+ const handleProviderLogin = () => {
+  signUpProvider(navigate)
  }
  return (
   <div className='d-flex justify-content-center' >
@@ -34,7 +37,7 @@ const Login = () => {
      </div>
      <input type="submit" className='btn btn-primary form-control' value="Sign In"/>
     </form>
-    <button className="btn btn-primary form-control">Continue with Google</button>
+    <button className="btn btn-primary form-control" onClick={handleProviderLogin } >Continue with Google</button>
   </div>
  </div>
  );
