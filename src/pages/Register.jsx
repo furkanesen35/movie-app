@@ -5,12 +5,13 @@ import {useNavigate} from "react-router-dom";
 const Register = () => {
  const navigate = useNavigate();
  const [firstName, setFirstName] = useState()
- const [lastname, setLastname] = useState()
+ const [lastName, setLastname] = useState()
  const [email, setEmail] = useState()
  const [password, setPassword] = useState()
  const handleSubmit = (e) => {
   e.preventDefault();
-  console.log(firstName,lastname,email,password);
+  const displayName = `${firstName} ${lastName}`
+  console.log(firstName,lastName,email,password);
   createUser(email,password,navigate)
  }
  return (
