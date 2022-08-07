@@ -64,7 +64,7 @@ export const signUpProvider = (navigate) => {
   .then((result) => {
    console.log(result);
    navigate('/');
-   toastSuccessNotify('Logged out successfully!');
+   toastSuccessNotify('Logged in successfully!');
   })
   .catch((error) => {
    console.log(error);

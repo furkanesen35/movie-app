@@ -27,7 +27,7 @@ const Main = () => {
  };
  const handleSubmit = (e) => {
   e.preventDefault();
-  if (searchTerm && currentUser) {
+  if (searchTerm) {
    getMovies(SEARCH_API + searchTerm);
   } else if (!currentUser) {
    toastWarnNotify('Please log in to search a movie');
