@@ -16,7 +16,7 @@ const Login = () => {
 
  return (
   <div className="d-flex justify-content-center">
-   <div className="form-image d-none d-md-block ">
+   <div className="form-image d-none d-xl-block ">
     <img src={'https://picsum.photos/800/800'} alt="sample-movie" />
    </div>
    <div className="register-form">

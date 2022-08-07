@@ -21,7 +21,7 @@ const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
  };
  return (
   <div className="movie" onClick={() => {navigate('/details/' + id);
-   !currentUser && toastWarnNotify('Please log in to see detail');}}>
+   }}>
    <img loading="lazy" src={poster_path ? IMG_API + poster_path : defaultImage} alt="movie-card"/>
    <div className="d-flex align-items-baseline justify-content-between p-1 text-white">
     <h5>{title}</h5>
